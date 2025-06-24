@@ -9,8 +9,10 @@ soup = BeautifulSoup(request.content, 'html.parser').get_text()
 env = Environment(loader=FileSystemLoader('templates'))
 template = env.get_template("template.html")
 
-update_time = datetime.now()
+# Get current time
+ct = datetime.now()
+time_updated = str(ct)[0:16]
 
 with open("index.html", "w", encoding="utf-8") as webpage:
-    webpage.write(template.render(datetime=update_time, body_text=soup))
+    webpage.write(template.render(datetime=time_updated, body_text=soup))
     webpage.close()
