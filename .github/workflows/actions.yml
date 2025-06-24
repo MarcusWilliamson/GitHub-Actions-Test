@@ -1,4 +1,4 @@
-name: run py files and build site
+name: run main.py
 
 on:
     #schedule:
