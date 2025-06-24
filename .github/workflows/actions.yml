@@ -52,7 +52,7 @@ jobs:
     needs: build
     steps:
       - name: Wait
-        run: sleep 15s
+        run: sleep 60s
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Pages
